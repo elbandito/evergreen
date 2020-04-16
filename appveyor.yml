@@ -17,4 +17,4 @@ init:
     pack version
 build_script:
 - ps: >-
-    pwd
+    pack build testfunc --builder heroku/functions-buildpacks --path project\js-test
