@@ -3,7 +3,7 @@ init:
 - ps: >-
     choco install docker-desktop
     
-    refreshenv
+    Install-WindowsFeature -Name Hyper-V -IncludeManagementTools -Restart
 build_script:
 - ps: >-
     docker run -it heroku/functions-buildpacks ls /
