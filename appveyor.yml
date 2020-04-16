@@ -2,6 +2,9 @@ version: 1.0.{build}
 image: Visual Studio 2019
 init:
 - ps: >-
+    $ProgressPreference = "SilentlyContinue"
+
+    pwd
 build_script:
 - ps: >-
     docker help
