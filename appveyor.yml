@@ -14,7 +14,7 @@ init:
     
     $env:Path += ";$env:PACK_HOME"
     
-    pack
+    pack version
 build_script:
 - ps: >-
-    docker help
+    pwd
