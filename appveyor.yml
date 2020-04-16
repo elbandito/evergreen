@@ -1,4 +1,6 @@
 version: 1.0.{build}
+services:
+- docker
 build_script:
 - ps: >-
     ls
