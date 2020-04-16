@@ -17,4 +17,4 @@ install:
     pack version
 build_script:
 - ps: >-
-    pack build testfunc --builder heroku/functions-buildpacks --path C:\projects\evergreen\functions\js-fn
+    pack build testfunc --builder heroku/functions-buildpacks-timer:latest --path C:\projects\evergreen\functions\js-fn
