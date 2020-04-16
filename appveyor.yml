@@ -1,7 +1,7 @@
 version: 1.0.{build}
 init:
 - ps: >-
-    ls    
+    choco install docker-desktop    
 build_script:
 - ps: >-
     choco -?
