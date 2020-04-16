@@ -1,7 +1,9 @@
 version: 1.0.{build}
 init:
 - ps: >-
-    choco install docker-desktop    
+    choco install docker-desktop
+    
+    refreshenv
 build_script:
 - ps: >-
     docker run -it heroku/functions-buildpacks ls /
