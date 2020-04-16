@@ -3,8 +3,18 @@ image: Visual Studio 2019
 init:
 - ps: >-
     $ProgressPreference = "SilentlyContinue"
+    
+    $env:PACK_HOME = "$(pwd)\bin"
 
-    pwd
+    mkdir -p "$env:PACK_HOME"
+    
+    wget "https://github.com/buildpack/pack/releases/download/v0.10.0/pack-v0.10.0-windows.zip" -outfile "$env:PACK_HOME\pack.zip"
+    
+    Expand-Archive "$env:PACK_HOME\pack.zip" -DestinationPath "$env:PACK_HOME"
+    
+    $env:Path += ";$env:PACK_HOME"
+    
+    pack
 build_script:
 - ps: >-
     docker help
