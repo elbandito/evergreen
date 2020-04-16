@@ -4,4 +4,4 @@ init:
     choco install docker-desktop    
 build_script:
 - ps: >-
-    choco -?
+    docker run -it heroku/functions-buildpacks ls /
