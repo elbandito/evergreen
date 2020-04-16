@@ -5,5 +5,4 @@ init:
     
 build_script:
 - ps: >-
-    ls
     choco
